@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>修嘉智 Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container my-5">
+        <h1>修嘉智 Dashboard</h1>
+        <div style="height: 500px;">
+            <div id="viz0" class="col-lg-8 px-0 w-75 p-3 h-100 d-inline-block">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/rough-viz@2.0.5"></script>
+    <script>
+        // create Donut chart using defined data & customize plot options
+        new roughViz.Donut(
+            {
+                element: '#viz0',
+                data: {
+                    labels: ['Brandon Lim', 'Shern Shiou Tan'],
+                    values: [181, 195]
+                },
+                title: "Number of Songs",
+                width: window.innerWidth / 4,
+                roughness: 2,
+                colors: ['#A2C3DB', '#8871A0'],
+                stroke: 'black',
+                strokeWidth: 2,
+                fillStyle: 'cross-hatch',
+                fillWeight: 3.5,
+            }
+        );
+    </script>
+</body>
+
+</html>
