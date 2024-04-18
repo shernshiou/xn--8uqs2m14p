@@ -1,0 +1,10 @@
+name: xn--8uqs2m14p
+static_sites:
+- environment_slug: html
+  name: xn--8uqs2m14p
+  github:
+    repo: shernshiou/xn--8uqs2m14p
+    branch: main
+    deploy_on_push: true
+  build_command: python generate.py
+  output_dir: static

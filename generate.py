@@ -39,7 +39,7 @@ def main():
     content = template.render(playlist_title=playlist["name"], num_by_user=num_by_user)
 
     # to save the results
-    with open("index.html", "w") as f:
+    with open("./static/index.html", "w") as f:
         f.write(content)
 
 
